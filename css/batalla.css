@@ -1,0 +1,192 @@
+﻿/* CONTENEDOR GENERAL */
+.panel-control{
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* BARRA SUPERIOR */
+.barra-superior input{
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 2px solid #555;
+    font-family: inherit;
+}
+
+/* FILTROS (nombre, elemento, botón) */
+.filtros{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.filtros input,
+.filtros select{
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    font-family: inherit;
+}
+
+/* BOTONES GENERALES */
+.panel-control .btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #555;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* MODOS */
+.modos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* BOTÓN GRANDE */
+.btn-combate{
+    padding: 20px 30px;
+    font-weight: bold;
+}
+
+#jugador-uno,
+#jugador-dos,
+#maquina {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+#jugador-uno {
+    border: 3px solid #FF6B6B;
+    background: rgba(255, 107, 107, 0.05);
+}
+
+#jugador-dos {
+    border: 3px solid #4ECDC4;
+    background: rgba(78, 205, 196, 0.05);
+}
+
+#maquina {
+    border: 3px solid #FFD93D;
+    background: rgba(255, 217, 61, 0.05);
+}
+
+.contenedor-batalla {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* espacio entre todo */
+}
+
+/* tus cards */
+.pokemon {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+/* botón del medio */
+.btn-vs {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #1c1c1c;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.btn-vs:hover {
+    transform: rotate(180deg) scale(1.1);
+    background: #e63946;
+}
+
+.titulo-jugador {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* ESTILOS DEL BOTÓN DE COMBATE */
+.btn-combate {
+    background: #27ae60 !important;
+    color: white !important;
+    border-color: #27ae60 !important;
+    transition: all 0.3s ease;
+}
+
+.btn-combate:not(:disabled):hover {
+    background: #229954 !important;
+    border-color: #229954 !important;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(39, 174, 96, 0.5);
+}
+
+.btn-combate:disabled {
+    background: #95a5a6 !important;
+    color: #7f8c8d !important;
+    border-color: #95a5a6 !important;
+    cursor: not-allowed !important;
+    opacity: 0.6;
+}
+.resultado-card {
+    max-width: 900px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(245,245,250,0.95));
+    border: 2px solid rgba(39, 174, 96, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+}
+
+.resultado-card h3 {
+    margin: 0 0 15px;
+    font-size: 1.8rem;
+    color: #1f2937;
+    text-align: center;
+}
+
+.battle-summary {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.battle-match {
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: rgba(39, 174, 96, 0.08);
+    border: 1px solid rgba(39, 174, 96, 0.16);
+    color: #2d3748;
+    font-size: 0.98rem;
+}
+
+.battle-match strong {
+    color: #1d4ed8;
+}
+
+.battle-final {
+    margin: 0;
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(39, 174, 96, 0.15), rgba(56, 189, 248, 0.12));
+    color: #0f172a;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+}

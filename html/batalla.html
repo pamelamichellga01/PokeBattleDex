@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/batalla.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <img src="../img/logo.png" alt="Logo Pokédex">
+
+            <ul class="nav-list">
+                <li class="nav-item"><button class="btn btn-header" id="ver-todos">Ver todos</button></li>
+                <li class="nav-item"><button class="btn btn-header normal" id="normal">Normal</button></li>
+                <li class="nav-item"><button class="btn btn-header fire" id="fire">Fire</button></li>
+                <li class="nav-item"><button class="btn btn-header water" id="water">Water</button></li>
+                <li class="nav-item"><button class="btn btn-header grass" id="grass">Grass</button></li>
+                <li class="nav-item"><button class="btn btn-header electric" id="electric">Electric</button></li>
+                <li class="nav-item"><button class="btn btn-header ice" id="ice">Ice</button></li>
+                <li class="nav-item"><button class="btn btn-header fighting" id="fighting">Fighting</button></li>
+                <li class="nav-item"><button class="btn btn-header poison" id="poison">Poison</button></li>
+                <li class="nav-item"><button class="btn btn-header ground" id="ground">Ground</button></li>
+                <li class="nav-item"><button class="btn btn-header flying" id="flying">Flying</button></li>
+                <li class="nav-item"><button class="btn btn-header psychic" id="psychic">Psychic</button></li>
+                <li class="nav-item"><button class="btn btn-header bug" id="bug">Bug</button></li>
+                <li class="nav-item"><button class="btn btn-header rock" id="rock">Rock</button></li>
+                <li class="nav-item"><button class="btn btn-header ghost" id="ghost">Ghost</button></li>
+                <li class="nav-item"><button class="btn btn-header dark" id="dark">Dark</button></li>
+                <li class="nav-item"><button class="btn btn-header dragon" id="dragon">Dragon</button></li>
+                <li class="nav-item"><button class="btn btn-header steel" id="steel">Steel</button></li>
+                <li class="nav-item"><button class="btn btn-header fairy" id="fairy">Fairy</button></li>
+            </ul>
+        </nav>
+
+        <!-- CONTROLES PRINCIPALES -->
+        <section class="panel-control">
+
+            <!-- filtros -->
+            <div class="filtros">
+                <!-- barra superior -->
+                <form class="search-form" onsubmit="return false;">
+                    <input type="text" id="searchInput" placeholder="Buscar Pokémon...">
+                </form>
+
+                <select id="select-tipo" class="select-tipo">
+                    <option value="todos">Ver todos</option>
+                    <option value="normal">Normal</option>
+                    <option value="fire">Fire</option>
+                    <option value="water">Water</option>
+                    <option value="grass">Grass</option>
+                    <option value="electric">Electric</option>
+                    <option value="ice">Ice</option>
+                    <option value="fighting">Fighting</option>
+                    <option value="poison">Poison</option>
+                    <option value="ground">Ground</option>
+                    <option value="flying">Flying</option>
+                    <option value="psychic">Psychic</option>
+                    <option value="bug">Bug</option>
+                    <option value="rock">Rock</option>
+                    <option value="ghost">Ghost</option>
+                    <option value="dark">Dark</option>
+                    <option value="dragon">Dragon</option>
+                    <option value="steel">Steel</option>
+                    <option value="fairy">Fairy</option>
+                </select>
+                <button type="button" class="btn btn-search">Agregar Pokémon</button>
+            </div>
+            <div id="sugerencias"></div>
+
+            <!-- modos -->
+            <div class="modos">
+                <button class="btn" id="btn-human">Con alguien</button>
+                <button class="btn" id="btn-maquina">Máquina</button>
+
+                <button class="btn btn-combate">Iniciar combate</button>
+            </div>
+        </section>
+
+    </header>
+    <main>
+        <div id="jugador-uno">
+            <h2 class="titulo-jugador">Jugador 1</h2>
+            <div class="contenedor-batalla cards">
+                <div class="pokemon">
+                    <!-- <p class="pokemon-id-back">#025</p>
+                    <div class="pokemon-imagen">
+                        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png"
+                            alt="Pikachu">
+                    </div>
+                    <div class="pokemon-info">
+                        <div class="nombre-contenedor">
+                            <p class="pokemon-id">#025</p>
+                            <h2 class="pokemon-nombre">Pikachu1</h2>
+                        </div>
+                        <div class="pokemon-stats">
+                            <div class="stat-row">
+                                <span class="stat-name">vida</span>
+                                <span class="stat-value">35</span>
+                            </div>
+                            <div class="barra">
+                                <div class="fill" style="width: 35%;"></div>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-name">ataque</span>
+                                <span class="stat-value">55</span>
+                            </div>
+                            <div class="barra">
+                                <div class="fill" style="width: 55%;"></div>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-name">defensa</span>
+                                <span class="stat-value">40</span>
+                            </div>
+                            <div class="barra">
+                                <div class="fill" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="pokemon-total">
+                            <div class="total-meta">
+                                <span>Total stats</span>
+                                <strong>130</strong>
+                            </div>
+                            <div class="total-bar">
+                                <div class="fill" style="width: 65%;"></div>
+                            </div>
+                            <p class="total-helper">Basado en un máximo de 200</p>
+                        </div>
+                    </div> -->
+                </div>
+
+                <button class="btn-vs" data-index="0">
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+
+                <div class="pokemon">
+                    
+                </div>
+
+                <button class="btn-vs" data-index="1">
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+
+                <div class="pokemon">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="jugador-dos">
+            <h2 class="titulo-jugador">Jugador 2</h2>
+            <div class="contenedor-batalla cards">
+                <div class="pokemon">
+                    
+                </div>
+
+                <button class="btn-vs" data-index="0">
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+
+                <div class="pokemon">
+                    
+                </div>
+
+                <button class="btn-vs" data-index="1">
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+
+                <div class="pokemon">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div id="maquina">
+            <h2 class="titulo-jugador">Maquina</h2>
+            <div class="contenedor-batalla cards">
+                <div class="pokemon">
+                    
+                </div>
+
+                <!-- <button class="btn-vs" data-index="0">
+                    <i class="fas fa-exchange-alt"></i>
+                </button> -->
+
+                <div class="pokemon">
+                    
+                </div>
+
+                <!-- <button class="btn-vs" data-index="1">
+                    <i class="fas fa-exchange-alt"></i>
+                </button> -->
+
+                <div class="pokemon">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/api.js"></script>
+    <div id="resultado-batalla" class="resultado-batalla"></div>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/batalla.js"></script>
+</body>
+
+</html>
